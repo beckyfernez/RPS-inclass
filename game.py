@@ -1,5 +1,5 @@
 
-#   todo: write some Python code here to satisfy the exercise objectives
+#  Write Python code here to satisfy the exercise objectives
 # ... https://github.com/prof-rossetti/intro-to-python/blob/main/exercises/rock-paper-scissors/README.md
 
 
@@ -8,13 +8,13 @@
 print ("Rock, Paper, Scissors, Shoot!")
 
 
-#Ask for a user input
+#ASK FOR USER INPUT
 userChoice = input("Please choose either : 'Rock', 'Paper', or 'Scissors': ")
 print ("You chose : ", userChoice)
     #eventually I want to convert all variations of "ROCK" into the standard "Rock"
 
 
-#Validate user input
+#VALIDATE USER INPUT
 if userChoice == "Rock":
     print ("You chose : ", userChoice)
 else:
@@ -33,8 +33,12 @@ gameOptions = ['Rock', 'Paper', 'Scissors']
 comChoice = random.choice(gameOptions)
 print("The computer chose : ", comChoice)
 
+#alternative way to import random function from library module
+#from random import choice
+#comChoice = choice(gameOptions)
 
-#Determine winner
+
+#DETERMINE WINNER
 #when to use elif and its syntax
 if userChoice == comChoice:
     print ("We have a tie.")
@@ -44,7 +48,7 @@ if userChoice == "Rock" and comChoice == "Scissors":
     print ("You won!")
 
 
-#Return Final Results
+#RETURN FINAL RESULTS
 
 
 #Ask if user would like to play again

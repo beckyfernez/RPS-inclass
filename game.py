@@ -4,22 +4,25 @@
 
 
 
-# this is the "game.py" file
+# This is the "game.py" file
 print ("Rock, Paper, Scissors, Shoot!")
+
 
 
 #ASK FOR USER INPUT
 userChoice = input("Please choose either : 'Rock', 'Paper', or 'Scissors': ")
 print ("You chose : ", userChoice)
-    #eventually I want to convert all variations of "ROCK" into the standard "Rock"
+#eventually I want to convert all variations of "ROCK" into the standard "Rock"
+
 
 
 #VALIDATE USER INPUT
-if userChoice == "Rock":
-    print ("You chose : ", userChoice)
-else:
-    print("Sorry that is not a valid input. You have exited the game.")
-    quit()
+#if userChoice == "Rock":
+#    print ("You chose : ", userChoice)
+#else:
+#    print("Sorry that is not a valid input. You have exited the game.")
+#    quit()
+
 
 
 #COMPUTER CHOICE (Generating a computer selection)
@@ -38,21 +41,32 @@ print("The computer chose : ", comChoice)
 #comChoice = choice(gameOptions)
 
 
+
 #DETERMINE WINNER
-#when to use elif and its syntax
+#This section of code was adapted from class lecture and slack comments
+#I originally was doing compound if statements but instead chose to go with nested if statements
 if userChoice == comChoice:
     print ("We have a tie.")
-if userChoice == "Rock" and comChoice == "Paper":
-    print ("Oh, the computer won. It's okay.")
-if userChoice == "Rock" and comChoice == "Scissors":
-    print ("You won!")
+elif userChoice == "Rock":
+    if comChoice == "Paper"
+        print ("Oh, the computer won. It's okay.")
+    else:
+        print ("You won!")
+elif userChoice == "Paper":
+    if comChoice == "Rock"
+        print ("You won!")
+    else:
+        print ("Oh, the computer won. It's okay.")
+
 
 
 #RETURN FINAL RESULTS
 
 
-#Ask if user would like to play again
+#Ask if user if they would like to play again
 replay = input("Would you like to play again? Choose 'Yes' or 'No' : ")
 if replay == "No":
     quit()
 if replay == "Yes":
+
+

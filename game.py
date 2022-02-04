@@ -5,9 +5,12 @@
 
 
 #  This is the "game.py" file
+import os
+player_name = os.getenv("PLAYER_NAME", default="Player One")
+
 print("-------------------")
 print(" ")
-print("Welcome 'Player One' to my game...")
+print("Welcome '", player_name, "' to my game...")
 print("Rock, Paper, Scissors, Shoot!")
 print(" ")
 print("-------------------")
@@ -26,8 +29,9 @@ userChoice = userChoice.title()
 #  VALIDATE USER INPUT
 #adapted from a class lesson in the course "Decision Support Systems"
 if userChoice == "Rock" or userChoice == "Paper" or userChoice == "Scissors":
-    print ("You chose :", userChoice)
+    print("You chose :", userChoice)
 else:
+    print(" ")
     print("Oops, that is not a valid input. You have exited the game.")
     quit()
 
@@ -54,17 +58,17 @@ print("The computer chose :", comChoice)
 #This section of code was adapted from class lecture and slack comments
 #I originally was doing compound if statements but instead chose to go with nested if statements
 if userChoice == comChoice:
-    print ("We have a tie.")
+    print("We have a tie.")
 elif userChoice == "Rock":
     if comChoice == "Paper":
-        print ("Oh, the computer won. It's okay.")
+        print("Oh, the computer won. It's okay.")
     else:
-        print ("You won!")
+        print("You won!")
 elif userChoice == "Paper":
     if comChoice == "Rock":
-        print ("You won!")
+        print("You won!")
     else:
-        print ("Oh, the computer won. It's okay.")
+        print("Oh, the computer won. It's okay.")
 
 
 print(" ")

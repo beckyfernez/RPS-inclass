@@ -47,11 +47,20 @@ player type(s) | description
 
 ## Usage
 
-Run the rock paper scissors game (human vs computer):
+Configure your own player name and run the rock paper scissors game(human vs computer):
+
+```sh
+player_name="Jon Snow" python game.py
+```
+
+OR
+
+Continue with default name and Run the rock paper scissors game (human vs computer):
 
 ```sh
 python game.py
 ```
+
 The game will only run once.
 
 ## Testing

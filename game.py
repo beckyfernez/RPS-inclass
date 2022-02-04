@@ -5,8 +5,13 @@
 
 
 #  This is the "game.py" file
-print ("Rock, Paper, Scissors, Shoot!")
-
+print("-------------------")
+print(" ")
+print("Welcome 'Player One' to my game...")
+print("Rock, Paper, Scissors, Shoot!")
+print(" ")
+print("-------------------")
+print(" ")
 
 
 #  ASK FOR USER INPUT
@@ -62,8 +67,8 @@ elif userChoice == "Paper":
         print ("Oh, the computer won. It's okay.")
 
 
-
-#RETURN FINAL RESULTS
+print(" ")
+print("Thanks for playing. Please play again!")
 
 
 #Ask if user if they would like to play again

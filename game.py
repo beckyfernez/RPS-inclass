@@ -26,9 +26,9 @@ userChoice = userChoice.title()
 #  VALIDATE USER INPUT
 #adapted from a class lesson in the course "Decision Support Systems"
 if userChoice == "Rock" or userChoice == "Paper" or userChoice == "Scissors":
-    print ("You chose : ", userChoice)
+    print ("You chose :", userChoice)
 else:
-    print("Sorry that is not a valid input. You have exited the game.")
+    print("Oops, that is not a valid input. You have exited the game.")
     quit()
 
 
@@ -42,7 +42,7 @@ else:
 import random
 gameOptions = ['Rock', 'Paper', 'Scissors']
 comChoice = random.choice(gameOptions)
-print("The computer chose : ", comChoice)
+print("The computer chose :", comChoice)
 
 #alternative way to import random function from library module
 #from random import choice

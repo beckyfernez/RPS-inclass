@@ -1,12 +1,41 @@
 
-#   To do: Write Python code here to satisfy the exercise objectives
+#     Write Python code here to satisfy the exercise objectives
 # ... https://github.com/prof-rossetti/intro-to-python/blob/main/exercises/rock-paper-scissors/README.md
 
 
-
 #  This is the "game.py" file
+
+
+#https://github.com/prof-rossetti/intro-to-python/blob/main/notes/python/modules/os.md#Environment-Variables
 import os
 player_name = os.getenv("PLAYER_NAME", default="Player One")
+
+
+#https://github.com/prof-rossetti/intro-to-python/blob/main/exercises/rock-paper-scissors/challenges.md
+def determine_winner(choice_1, choice_2):
+    """
+    Determines the winning choice between two valid choices from selectable options: "Rock", "Paper", or "Scissors".
+    Returns the winning choice (e.g. "Paper"), or None if there is a tie.
+    Example: determine_winner("Rock", "Paper")
+    """
+    if choice_1 == choice_2:
+        return "None"
+    if choice_1 == "Rock":
+        if choice_2 == "Paper":
+            return "Paper"
+        if choice_2 == "Scissors":
+            return "Rock"
+    if choice_1 == "Paper":
+        if choice_2 == "Rock":
+            return "Paper"
+        if choice_2 == "Scissors":
+            return "Scissors"
+    if choice_1 == "Scissors":
+        if choice_2 == "Rock":
+            return "Rock"
+        if choice_2 == "Paper":
+            return "Scissors"
+
 
 print("-------------------")
 print(" ")
@@ -25,16 +54,14 @@ userChoice = input("Please choose either : 'Rock', 'Paper', or 'Scissors': ")
 userChoice = userChoice.title()
 
 
-
 #  VALIDATE USER INPUT
 #adapted from a class lesson in the course "Decision Support Systems"
 if userChoice == "Rock" or userChoice == "Paper" or userChoice == "Scissors":
     print("You chose :", userChoice)
 else:
     print(" ")
-    print("Oops, that is not a valid input. You have exited the game.")
+    print("Oops, that is not a valid input. The game has exited.")
     quit()
-
 
 
 #  COMPUTER CHOICE (Generating a computer selection)
@@ -42,16 +69,13 @@ else:
 #https://docs.python.org/3/library/random.html#random.choice
 #https://www.geeksforgeeks.org/python-select-random-value-from-a-list/
 #https://github.com/prof-rossetti/intro-to-python/blob/main/notes/python/modules/random.md
-
 import random
 gameOptions = ['Rock', 'Paper', 'Scissors']
 comChoice = random.choice(gameOptions)
 print("The computer chose :", comChoice)
-
 #alternative way to import random function from library module
 #from random import choice
 #comChoice = choice(gameOptions)
-
 
 
 #  DETERMINE WINNER
@@ -69,19 +93,5 @@ elif userChoice == "Paper":
         print("You won!")
     else:
         print("Oh, the computer won. It's okay.")
-
-
 print(" ")
 print("Thanks for playing. Please play again!")
-
-
-#Ask if user if they would like to play again
-
-#replay = input("Would you like to play again? Choose 'Yes' or 'No' : ")
-#if replay == "No":
-#    quit()
-#if replay == "Yes":
-
-#maybe a GoTo statement
-
-

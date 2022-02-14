@@ -8,7 +8,7 @@
 
 #https://github.com/prof-rossetti/intro-to-python/blob/main/notes/python/modules/os.md#Environment-Variables
 import os
-player_name = os.getenv("PLAYER_NAME", default="Player One")
+PLAYER_NAME = os.getenv("PLAYER_NAME", default="Player One")
 
 
 #https://github.com/prof-rossetti/intro-to-python/blob/main/exercises/rock-paper-scissors/challenges.md
@@ -39,7 +39,7 @@ def determine_winner(choice_1, choice_2):
 
 print("-------------------")
 print(" ")
-print("Welcome '", player_name, "' to my game...")
+print("Welcome '", PLAYER_NAME, "' to my game...")
 print("Rock, Paper, Scissors, Shoot!")
 print(" ")
 print("-------------------")

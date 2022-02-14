@@ -50,7 +50,7 @@ player type(s) | description
 Configure your own player name and run the rock paper scissors game (human vs computer):
 
 ```sh
-player_name="Jon Snow" python game.py
+PLAYER_NAME="Jon Snow" python game.py
 ```
 
 OR
